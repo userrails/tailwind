@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's explore Tailwind CSS</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Your content goes here -->
+<div class="container mx-auto py-6">
+    <h1 class="text-3xl font-bold text-center text-gray-800">Welcome! Let's walkthrough with Tailwind CSS</h1>
+    <p class="text-lg text-center text-gray-600">Let's explore Tailwind!</p>
+</div>
+
+<div class="container mx-auto py-6">
+    <p class="text-lg text-left text-gray-600 font-bold">Horizontal Nav</p>
+    <nav>
+        <ul class="flex">
+            <li>
+                <a href="#" class="p-2">Home</a>
+            </li>
+            <li>
+                <a href="#" class="p-2">About</a>
+            </li>
+            <li class="relative">
+                <a href="#" class="p-2">Services</a>
+                <ul class="dropdown-menu hidden bg-gray-100 absolute top-full left-0">
+                    <li><a href="#" class="block p-2">Service 1</a></li>
+                    <li><a href="#" class="block p-2">Service 2</a></li>
+                    <li><a href="#" class="block p-2">Service 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="p-2">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <p class="text-lg text-left text-gray-600 font-bold">Vertical Nav</p>
+    <nav class="flex flex-col">
+        <a href="#" class="p-2">Home</a>
+        <a href="#" class="p-2">About</a>
+        <a href="#" class="p-2">Services</a>
+        <a href="#" class="p-2">Contact</a>
+    </nav>
+</div>
+
+<div class="container mx-auto py-6">
+    <p class="text-lg text-left text-gray-600 font-bold">Basic utility classes for styling text elements</p>
+
+    <p class="text-black">Black Text</p>
+    <p class="text-red-500">Red Text</p>
+    <p class="text-blue-700">Blue Text</p>
+    <p class="text-green-700">Green Text</p>
+
+    <p class="text-xs">Extra Small Text</p>
+    <p class="text-lg">Large Text</p>
+    <p class="text-3xl">Extra Large Text</p>
+
+    <p class="font-thin">Thin Font</p>
+    <p class="font-bold">Bold Font</p>
+
+    <p class="underline">Underlined Text</p>
+    <p class="line-through">Line-through Text</p>
+</div>
+
+<div class="container mx-auto py-6">
+    <p class="text-lg text-left text-gray-600 font-bold">Utility classes for styling background colors and borders</p>
+
+    <div class="bg-red-500 p-4">
+        <p>Red Background</p>
+    </div>
+    <div class="bg-blue-700 p-4">
+        <p>Blue Background</p>
+    </div>
+
+    <div class="bg-red-500 bg-opacity-25 p-4">
+        <p>Red Background with 25% Opacity</p>
+    </div>
+    <div class="bg-blue-700 bg-opacity-50 p-4">
+        <p>Blue Background with 50% Opacity</p>
+    </div>
+
+    <div class="border border-black p-4">
+        <p>Border</p>
+    </div>
+    <div class="border border-red-500 border-solid p-4">
+        <p>Red Border</p>
+    </div>
+
+    <div class="bg-gray-300 rounded-lg p-4">
+        <p>Rounded Corners</p>
+    </div>
+
+    <div class="bg-gray-300 rounded-lg shadow-md p-4">
+        <p>Box Shadow</p>
+    </div>
+    
+</div>
+
+<div class="container mx-auto py-6">
+    <p class="text-lg text-left text-gray-600 font-bold">Flex container with different flex direction at different screen sizes</p>
+    <div class="flex flex-col sm:flex-row md:flex-col lg:flex-row xl:flex-col 2xl:flex-row">
+        <!-- Flex container with different flex direction at different screen sizes -->
+        <div class="flex-1 bg-gray-200 p-4">Item 1</div>
+        <div class="flex-1 bg-gray-300 p-4">Item 2</div>
+    </div>
+</div>
+
+<!-- responsiveness -->
+<div class="container mx-auto py-6">
+    <p class="text-lg text-left text-green-600 font-bold">Let's dive into buttons and interactive elements in Tailwind CSS</p>
+    <div class="flex space-x-4">
+        <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded">Button 1</button>
+        <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded">Button 2</button>
+        <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded">Button 3</button>
+    </div>
+</div>
+
+<div class="container mx-auto py-6">
+    <p class="text-lg text-left text-yellow-600 font-bold">Let's dive into Grid columns</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="bg-gray-200 p-4">Item 1</div>
+        <div class="bg-gray-300 p-4">Item 2</div>
+        <div class="bg-gray-400 p-4">Item 3</div>
+        <div class="bg-gray-500 p-4">Item 4</div>
+    </div>
+</div>
+
+
+<!-- form -->
+<div class="container mx-auto py-6">
+    <p class="text-lg text-left text-red-600 font-bold my-5">Let's dive into form components</p>
+    <form class="flex flex-col mb-10">
+        <!-- Vertical form layout -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" class="border p-2 mb-4">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" class="border p-2 mb-4">
+
+        <button type="submit" class="bg-blue-500 text-white font-bold py-2 px-4 rounded">Submit</button>
+    </form>
+    
+    <div class="py-5">
+        <input type="text" class="border border-gray-300 p-2 rounded focus:outline-none focus:ring focus:border-blue-500">
+    </div>
+    
+    <div class="py-5">
+        <label class="inline-flex items-center">
+            <input type="checkbox" class="form-checkbox text-blue-500">
+            <span class="ml-2">Remember me</span>
+        </label>
+    </div>
+
+    <div class="py-7">
+        <label class="inline-flex items-center">
+            <input type="radio" class="form-radio text-blue-500" name="radio">
+            <span class="ml-2">Option 1</span>
+        </label>
+    </div>
+
+    <label class="inline-flex items-center">
+        <input type="radio" class="form-radio text-blue-500" name="radio">
+        <span class="ml-2">Option 2</span>
+    </label>
+
+    <select class="border p-2 rounded">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+    </select>
+
+    <input type="text" class="border p-2 rounded focus:outline-none focus:ring focus:border-blue-500">
+    <span class="text-red-500">Invalid input</span>
+</div>
+
+<div class="container mx-auto py-6">
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Click me
+    </button>
+
+    <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded text-xs">
+        Small Button
+    </button>
+    <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded text-lg">
+        Large Button
+    </button>
+
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+        Hoverable Button
+    </button>
+    <button class="bg-blue-500 active:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Clicked Button
+    </button>
+    <button class="bg-gray-300 text-gray-500 font-bold py-2 px-4 rounded cursor-not-allowed" disabled>
+        Disabled Button
+    </button>
+</div>
+
+<div class="container mx-auto py-6">
+    <!-- Responsive Image -->
+    <img src="https://source.unsplash.com/random/800x600" alt="Random Image" class="w-full">
+
+    <!-- Image with Specific Size -->
+    <img src="https://source.unsplash.com/random/400x300" alt="Random Image" class="w-64 h-48">
+
+    <!-- Rounded Corners -->
+    <img src="https://source.unsplash.com/random/800x600" alt="Random Image" class="rounded-lg">
+
+    <!-- Image with Shadow -->
+    <img src="https://source.unsplash.com/random/800x600" alt="Random Image" class="shadow-md">
+
+    <!-- Image with Aspect Ratio -->
+    <div class="aspect-w-16 aspect-h-9">
+        <img src="https://source.unsplash.com/random/800x600" alt="Random Image" class="object-cover">
+    </div>
+</div>
+
+
+<!-- JavaScript -->
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get all dropdown toggle buttons
+        var dropdownToggleButtons = document.querySelectorAll('.relative > a');
+        
+        // Add event listeners to toggle dropdown visibility
+        dropdownToggleButtons.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default anchor behavior
+                var dropdownMenu = this.parentElement.querySelector('.dropdown-menu');
+                dropdownMenu.classList.toggle('hidden');
+            });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.relative')) {
+                var dropdownMenus = document.querySelectorAll('.dropdown-menu');
+                dropdownMenus.forEach(function(menu) {
+                    menu.classList.add('hidden');
+                });
+            }
+        });
+    });
+</script>
+
+
+</body>
+</html>
